@@ -1,3 +1,10 @@
 
+let args = process.argv.slice(2)
 let matematica = require('funcoes-matematicas');
-console.log(matematica.calcularSoma(1,2))
+
+
+let a = Number(args[0]);
+let b = Number(args[1]);
+
+
+console.log(matematica.calcularMultiplicacao(a,b))
