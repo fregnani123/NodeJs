@@ -1,20 +1,10 @@
 
-let http = require('http');
-let url = require('url');
+const calcMult = require('./calcTest');
+const calcSoma = require('./scriptCalc');
 
-http.createServer((request, response) => {
+let joinCalc = {...calcSoma,...calcMult};
 
-response.writeHead(200,{'content-type':'text-plain'})
-
-response.end('hello world');
-
-}).listen(3000, (err)=>{
-    if (err) {
-        console.log(err)
-    }else{
-        console.log('servidor rodando na porta 3000')
-    }
-})
+console.log(joinCalc.mult(5,5))
 
 
 
